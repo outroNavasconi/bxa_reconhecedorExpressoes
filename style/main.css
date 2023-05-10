@@ -1,0 +1,154 @@
+html, body, header, section, h1, h2, div, textarea, img, p, span {
+	border: 0;
+  margin: 0;
+	padding: 0;
+	font: inherit;
+  display: block; 
+  box-sizing: border-box;
+}
+
+html, body {
+  tab-size: 4;
+  width: 100%;
+  height: 100%;
+  background-color: #212121;
+  font-family: 'Nunito', sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 40%;
+  color: #ededed;
+}
+
+header section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #edededc0;
+  line-height: 1.5rem;
+}
+
+.upper {
+  top: -10px;
+  position: relative;
+  font-size: .725rem;
+  display: inline-block;
+}
+
+main {
+  width: 100%;
+}
+
+section#fields {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+textarea {
+  width: 500px;
+  resize: none;
+  outline: none;
+  font-size: 1rem;
+  line-height: 24px;
+  padding: 4px 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: #ededed;
+  box-shadow: 0px 0px 30px 5px #131313;
+}
+
+.buttons {
+  flex: 0;
+  display: flex;
+  flex-basis: 58px;
+  align-items: flex-end;
+}
+
+.buttonBackground {
+  width: 30px;
+  height: 30px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons div.buttonBackground {
+  cursor: pointer;
+}
+
+.buttons img {
+  width: 24px;
+  height: 24px;
+}
+
+.buttons div.disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.buttons div.buttonBackground:first-child {
+  margin-right: 5px;
+}
+
+section#results {
+  margin-top: 40px;
+}
+
+section#results div {
+  width: 100%;
+  display: flex;
+}
+
+section#results span {
+  width: 100px;
+  flex-grow: 2;
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+section#results span:nth-child(1) {
+  color: #ededed;
+  text-align: end;
+}
+
+section#results .line {
+  width: 40px;
+  display: flex;
+  margin: 0px 5px;
+  justify-content: end;
+}
+
+section#results .doubleLine {
+  top: -10px;
+  position: relative;
+}
+
+.operator {
+  color: #3BA3CC;
+  font-weight: bold;
+}
+
+.valid {
+  color: #6BD750;
+  font-weight: bold;
+}
+
+.invalid {
+  color: #EB3636;
+  font-weight: bold;
+}
