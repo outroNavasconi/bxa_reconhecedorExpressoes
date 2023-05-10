@@ -5,8 +5,8 @@ const SEND = document.getElementById('send')
 const ERASER = document.getElementById('eraser')
 const INPUT = document.getElementById('textarea')
 const RESULTS = document.getElementById('results')
-
 const SINGLE_LINE = document.getElementById('singleLine')
+const DOUBLE_LINE = document.getElementById('doubleLine')
 
 INPUT.oninput = function() {
   if (this.value.length > 0)
@@ -173,9 +173,10 @@ function appendSpanCategoryModel(node, content) {
  */
 function appendSingleLine(node) {
   const div = document.createElement('div')
-  const img = document.createElement('img')
-  div.append(SINGLE_LINE.cloneNode())
+  const img = SINGLE_LINE.cloneNode()
+  img.classList.remove('off')
   div.classList.add('line')
+  div.append(img)
   node.append(div)
 }
 
@@ -186,8 +187,8 @@ function appendSingleLine(node) {
  */
 function appendDoubleLine(node) {
   const div = document.createElement('div')
-  const img = document.createElement('img')
-  img.src = '../img/doubleLine.svg'
+  const img = DOUBLE_LINE.cloneNode()
+  img.classList.remove('off')
   div.classList.add('line', 'doubleLine')
   div.append(img)
   node.append(div)
