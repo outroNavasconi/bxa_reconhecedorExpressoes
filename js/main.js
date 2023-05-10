@@ -6,6 +6,8 @@ const ERASER = document.getElementById('eraser')
 const INPUT = document.getElementById('textarea')
 const RESULTS = document.getElementById('results')
 
+const SINGLE_LINE = document.getElementById('singleLine')
+
 INPUT.oninput = function() {
   if (this.value.length > 0)
     enableButtons()
@@ -172,9 +174,8 @@ function appendSpanCategoryModel(node, content) {
 function appendSingleLine(node) {
   const div = document.createElement('div')
   const img = document.createElement('img')
-  img.src = '../img/singleLine.svg'
+  div.append(SINGLE_LINE.cloneNode())
   div.classList.add('line')
-  div.append(img)
   node.append(div)
 }
 
